@@ -13,13 +13,14 @@
 # limitations under the License.
 
 from distutils.core import setup
-
+from setuptools import setup, find_packages
 setup(
     name='KoSpeech',
-    version='latest',
+    version='1.0.0',
     description='Open-Source Toolkit for End-to-End Korean Speech Recognition',
     author='Soohwan Kim',
     author_email='kaki.brain@kakaobrain.com',
+    packages=find_packages(include=['data', 'configs', 'dataset', 'kospeech']),
     url='https://github.com/sooftware/KoSpeech',
     install_requires=[
         'torch>=1.4.0',
